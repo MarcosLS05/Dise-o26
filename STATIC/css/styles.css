@@ -1,0 +1,508 @@
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable no-descending-specificity */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+}
+
+.title {
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.title a {
+    color: #7DBC91; 
+    text-decoration: none; 
+}
+
+.selectors {
+    display: flex;
+    gap: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Línea horizontal */
+.divider-horizontal {
+    border: none;
+    border-top: 2px solid #a7a7a7; /* Línea horizontal sólida */
+    width: 100%; /* Ocupa el 80% del contenedor */
+    margin: 20px auto; /* Centrar y margen superior e inferior */
+    margin-top: 3px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+}
+
+.ekommart {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.search {
+    position: relative; /* Para posicionar los elementos dentro del contenedor */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Ancho máximo del campo de búsqueda */
+}
+
+.search i.bi-search {
+    position: absolute;
+    left: 10px; /* Posiciona el ícono dentro del campo */
+    font-size: 20px;
+    color: #666;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Espacio para el ícono de búsqueda */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search button {
+    position: absolute; 
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    background-color: #7DBC91;
+    border: none;
+    font-size: 16px;
+    padding: 5px 15px; 
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 15px; /* Añade espacio entre los iconos */
+    margin-right: 200px; /* Aumenta el espacio entre los iconos y el borde derecho */
+}
+
+.icons i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.button {
+    margin-right: 20px;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    background-color: #7DBC91;
+}
+
+.nav > li {
+    position: relative;
+}
+
+/* Estilos para el menú principal */
+.display-section {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    background-color: #7DBC91;
+    padding: 10px;
+}
+
+
+.nav > li > a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #7DBC91;
+    color: #fff;
+    display: block;
+    border-radius: 5px;
+}
+
+.nav > li > a:hover {
+    background-color: #98c539;
+}
+
+/* Estilos para los submenús */
+.submenu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.submenu li {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+
+.submenu li a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.nav > li:hover .submenu {
+    display: block;
+}
+
+.image-container {
+    width: 100%;
+    height: auto; 
+}
+
+.image-container img {
+    width: 100%;   
+    height: 20%;  
+    
+}
+
+.timer {
+    padding: 20px;
+    
+}
+
+.deals-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.timer h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.timer p {
+    font-size: 14px;
+    color: #aaa;
+    margin: 5px 0 0;
+}
+
+.contador {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.time {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #61b763;
+}
+
+.label {
+    font-size: 14px;
+    color: #333;
+    
+}
+
+.separator {
+    font-size: xx-large;
+    margin: 0 5px;
+}
+
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    width: 4000px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.badges {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.badge {
+    padding: 14px 18px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.badge.new {
+    background-color: #033c;
+}
+
+.badge.sale {
+    background-color: #c00;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.rating {
+    font-size: 14px;
+    color: #f7b500;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #61b763;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.divider-green {
+    border-bottom: 3px solid #17f707; /* Línea horizontalgradable */
+    border-top: 3px solid #17f707; /* Línea horizontal sólida */
+    width: 95%; /* Ocupa el 80% del contenedor */
+    bottom: 10px;
+}
+
+/* Contenedor principal para el layout */
+.shop-container {
+    display: flex;
+    gap: 20px;
+    max-width: 100%; /* Asegura que el contenedor ocupe todo el ancho de la pantalla */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Sidebar de categorías */
+.categories {
+    flex: 0 0 250px; /* Define un ancho fijo para el sidebar */
+    border-right: 1px solid #e0e0e0;
+    padding: 0;
+}
+
+/* Estilos de los títulos */
+.categories h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilos de la lista de categorías */
+.categories ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Estilos de los elementos de la lista */
+.categories li {
+    margin-bottom: 10px;
+}
+
+/* Estilos de los enlaces de la lista */
+.categories li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Contenido principal del producto */
+.product-main {
+    flex: 2;
+    display: flex;
+    gap: 20px;
+}
+
+.product-images {
+    width: 20%;
+    height: auto;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.product-feature {
+    position: relative;
+    width: 100%; /* Asegura que el contenedor ocupe el 100% de su espacio */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-main {
+    flex: 2;
+    display: flex;
+    height: 100%;
+    
+}
+
+.product-feature {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-images {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1.2;
+  }
+  
+  .product-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  .product-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    top: 35%;
+    width: 100%;
+    position: absolute;
+  }
+  
+  .product-details {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 12px;
+  }
+  
+  .ratings {
+    margin-bottom: 10px;
+  }
+  
+  .product-titles {
+    margin-bottom: 10px;
+  }
+
+  .related-product {
+    position: relative;
+    width: 80%; /* Asegura que el contenedor ocupe el 100% de su espacio */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+/* Banner de promoción */
+.promo-banner {
+    flex: 1; /* Hace que el banner ocupe un tercio del espacio */
+    background-color: #e0f7fa;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
