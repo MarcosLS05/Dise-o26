@@ -174,7 +174,7 @@ header {
 }
 
 .nav > li > a:hover {
-    background-color: #98c539;
+    background-color:  #7DBC91;
 }
 
 /* Estilos para los submenús */
@@ -264,7 +264,7 @@ header {
 .number {
     font-size: 32px;
     font-weight: bold;
-    color: #61b763;
+    color:  #7DBC91;
 }
 
 .label {
@@ -338,14 +338,14 @@ header {
 
 .product-price {
     font-size: 18px;
-    color: #61b763;
+    color:  #7DBC91;
     font-weight: bold;
     display: inline-block;
 }
 
 .divider-green {
-    border-bottom: 3px solid #17f707; /* Línea horizontalgradable */
-    border-top: 3px solid #17f707; /* Línea horizontal sólida */
+    border-bottom: 3px solid  #7DBC91; /* Línea horizontalgradable */
+    border-top: 3px solid  #7DBC91; /* Línea horizontal sólida */
     width: 95%; /* Ocupa el 80% del contenedor */
     bottom: 10px;
 }
@@ -401,7 +401,6 @@ header {
 
 .product-images {
     width: 20%;
-    height: auto;
     border-radius: 8px;
     align-items: center;
 }
@@ -424,7 +423,7 @@ header {
 
 .product-feature {
     position: relative;
-    width: 50%;
+    width: 40%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -433,6 +432,7 @@ header {
   
   .product-images {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     aspect-ratio: 1 / 1.2;
   }
@@ -453,48 +453,105 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    top: 35%;
+    gap: 30px;
+    top: 50%;
     width: 100%;
     position: absolute;
   }
   
   .product-details {
+    position: absolute;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     bottom: 12px;
+    left: 0%;
+    width: 100%;
+    ;
   }
   
   .ratings {
     margin-bottom: 10px;
+    color: #f7b500;
   }
   
   .product-titles {
     margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
   }
 
-  .related-product {
-    position: relative;
-    width: 80%; /* Asegura que el contenedor ocupe el 100% de su espacio */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .product-price {
+    font-size: 18px;
+    color:  #7DBC91;
+    font-weight: bold;
+    display: inline-block;
 }
 
+.product-actions i{
+    cursor: pointer;
+    font-size: 24px;
+    color:  #000201;
+}
+
+.especial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #7DBC91;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  
+  .especial i {
+    font-size: 24px;
+    color: white;
+  }
+
+  .related-product{
+    position: relative;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    
+  }
+
+  .related-product-item{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .estrellas{
+    color: #f7b500;
+  }
+
+
+
+  .product-thumbsnail{
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .related-product-price{
+    color: #7DBC91;
+  }
+  
 
 
 
 /* Banner de promoción */
 .promo-banner {
-    flex: 1; /* Hace que el banner ocupe un tercio del espacio */
-    background-color: #e0f7fa;
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
+    width: 30%;
+    
 }
 
 
