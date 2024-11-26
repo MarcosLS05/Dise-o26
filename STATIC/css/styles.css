@@ -397,6 +397,7 @@ header {
     flex: 2;
     display: flex;
     gap: 20px;
+    height: 100%;
 }
 
 .product-images {
@@ -412,13 +413,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.product-main {
-    flex: 2;
-    display: flex;
-    height: 100%;
-    
 }
 
 .product-feature {
@@ -545,14 +539,237 @@ header {
     color: #7DBC91;
   }
   
-
-
-
 /* Banner de promoción */
 .promo-banner {
-    width: 30%;
+    width: 30%;   
+}
+
+.manguera-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
     
 }
+
+.manguera, .manguera2 {
+    width: 40%; 
+}
+
+.manguera img, .manguera2 img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+}
+
+.garden-tools {
+    display: flex; 
+    align-items: center; 
+    width: 100%;
+    padding: 0 10%; 
+}
+
+.garden{
+    color: #7DBC91;
+}
+
+/* Contenedor principal */
+.container-a123 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Bloques de productos */
+.block-a123,
+.block-b456 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 48%;
+}
+
+/* Productos individuales */
+.item-a123,
+.item-b456 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    /* stylelint-disable-next-line alpha-value-notation */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Imágenes */
+.image-a123,
+.image-b456 {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Información del producto */
+.info-a123,
+.info-b456 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Calificaciones */
+.rating-a123,
+.rating-b456 {
+    color: #f7b500;
+    font-size: 14px;
+}
+
+/* Títulos de los productos */
+.title-a123,
+.title-b456 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Precios */
+.price-a123,
+.price-b456 {
+    color: #7DBC91;
+    font-size: 14px;
+}
+
+.fondoGrande {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondoAñadido {
+    width: 100%;
+}
+
+.fondoImagen {
+    width: 100%;
+    height: auto; 
+    display: block; 
+}
+
+.corto {
+    top: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog p{
+    color: #a7a7a7;
+    justify-content: center;
+    align-items: center;
+}
+
+.three-image-section {
+    display: flex;
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap; /* Asegura que las tarjetas se acomoden si el espacio es limitado */
+    margin: 20px 0;
+}
+
+.image-card {
+    flex: 1;
+    max-width: 30%; /* Tres tarjetas, cada una ocupa un 30% del ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    gap: 10px; /* Espacio entre los elementos internos */
+}
+
+.image-card img.image {
+    width: 100%;
+    height: auto; /* Mantener proporción */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar estilo */
+}
+
+.image-card .caption {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.image-card .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.image-card .description {
+    font-size: 16px;
+    color: #555;
+    margin: 0 10px;
+    line-height: 1.5;
+}
+
+.image-card .read-more {
+    font-size: 16px;
+    color: #7DBC91;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.image-card .read-more:hover {
+    color: #7DBC91; /* Cambiar color al pasar el cursor */
+}
+
+.four-image-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las imágenes */
+    width: 100%;
+    flex-wrap: wrap; /* Permite que se acomoden en varias filas si no hay espacio suficiente */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: row; /* Cambié de column a row */
+    align-items: center; /* Alinea la imagen y el título verticalmente */
+    text-align: left; /* Alinea el título a la izquierda */
+    flex: 1;
+}
+
+.image-item img.image {
+    width: 20%; /* La imagen ocupa el 80% del contenedor */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle un estilo */
+}
+
+.image-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 20px; /* Espacio entre la imagen y el título */
+}
+
+
+
+
+
+
 
 
 
