@@ -765,6 +765,13 @@ header {
     margin-left: 20px; /* Espacio entre la imagen y el título */
 }
 
+.user-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Espacio entre los bloques */
+    flex-wrap: wrap; /* Permite que los bloques bajen si no hay suficiente espacio */
+}
+
 
 
 
