@@ -651,6 +651,7 @@ header {
     align-items: center;
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
 .fondoAñadido {
     width: 100%;
 }
@@ -699,8 +700,6 @@ header {
 .image-card img.image {
     width: 100%;
     height: auto; /* Mantener proporción */
-    border-radius: 8px; /* Bordes redondeados opcionales */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar estilo */
 }
 
 .image-card .caption {
@@ -762,15 +761,55 @@ header {
     font-size: 16px;
     font-weight: bold;
     color: #333;
-    margin-left: 20px; /* Espacio entre la imagen y el título */
-}
+}  
 
 .user-info {
     width: 100%;
-    display: flex;
-    justify-content: space-between; /* Espacio entre los bloques */
-    flex-wrap: wrap; /* Permite que los bloques bajen si no hay suficiente espacio */
+    align-items: flex-start;
+    flex-wrap: wrap;
+   
 }
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+    justify-content: space-between;
+}
+
+.footer-item h3 {
+    font-size: small;
+}
+
+.email a {
+    color: #7DBC91;
+}
+
+.change-color {
+    color: red;
+    font-size: larger;
+}
+
+.more-content-two h3{
+    font-size: smaller;
+    color: #000201;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
