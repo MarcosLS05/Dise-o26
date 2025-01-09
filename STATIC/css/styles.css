@@ -1,10 +1,9 @@
-/* stylelint-disable no-duplicate-selectors */
-/* stylelint-disable no-descending-specificity */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-image: url('img/fondodelapagina.jpg'); /* Fondo con imagen */
+    width: 100%;
 }
 
 header {
@@ -127,13 +126,40 @@ header {
 
 .icons {
     display: flex;
-    gap: 15px; /* Añade espacio entre los iconos */
-    margin-right: 200px; /* Aumenta el espacio entre los iconos y el borde derecho */
+    gap: 15px; /* Espacio entre los iconos */
+    margin-right: 200px; /* Espacio entre los iconos y el borde derecho */
+    position: relative; /* Necesario para posicionar los elementos hijos */
+    align-items: center;
 }
 
 .icons i {
     font-size: 24px;
     cursor: pointer;
+    position: relative; /* Para posicionar el indicador */
+}
+
+/* Indicador de notificación */
+.icons i::after {
+    content: attr(data-count); /* Toma el valor de data-count */
+    position: absolute;
+    top: -5px; /* Ajusta según sea necesario */
+    right: -10px; /* Ajusta según sea necesario */
+    background-color: #ff3b3b; /* Color rojo para la alerta */
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%; /* Hace el círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid white; /* Añade un borde blanco alrededor */
+}
+
+/* Si no hay notificaciones, oculta el indicador */
+.icons i[data-count="0"]::after {
+    display: none;
 }
 
 .button {
@@ -231,8 +257,7 @@ header {
 
 .deals-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Alinea ambos divs verticalmente */
     padding: 20px;
     background-color: #fff;
 }
@@ -251,8 +276,9 @@ header {
 
 .contador {
     display: flex;
-    gap: 15px;
-    
+    align-items: center; /* Alinea los bloques del contador verticalmente */
+    gap: 15px; /* Espacio entre los elementos dentro del contador */
+    justify-content: flex-end; /* Asegura que esté alineado a la derecha */
 }
 
 .time {
@@ -546,10 +572,10 @@ header {
 
 .manguera-container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center; 
     width: 100%;
-    
+    gap: 40px;
 }
 
 .manguera, .manguera2 {
@@ -566,7 +592,7 @@ header {
     display: flex; 
     align-items: center; 
     width: 100%;
-    padding: 0 10%; 
+    padding: 30px; 
 }
 
 .garden{
@@ -767,6 +793,7 @@ header {
     width: 100%;
     align-items: flex-start;
     flex-wrap: wrap;
+    padding: 30px;
    
 }
 
@@ -793,6 +820,86 @@ header {
 .more-content-two h3{
     font-size: smaller;
     color: #000201;
+}
+
+.last-one {
+    display: flex;
+    flex-direction: row; /* Cambiado a 'row' para mantener los divs en una fila */
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between; /* Espaciar los divs a lo largo del ancho */
+    text-align: center;
+    background-color: #0f5a26;
+    padding: 30px; /* Espacio arriba y abajo de 20px, y 10px en los lados */
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.last-icon {
+    font-size: 30px;
+    color: white;
+}
+
+.search-bar-last {
+    position: relative; /* Para posicionar los elementos dentro del contenedor */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Ancho máximo del campo de búsqueda */
+    margin: 0 auto; /* Centra el contenedor si es necesario */
+}
+
+.search-bar-last i {
+    position: absolute;
+    left: 10px; /* Posiciona el ícono dentro del campo */
+    font-size: 20px;
+    color: #666;
+}
+
+.newsletter {
+    color:#ccc;
+    font-size: small;
+}
+
+.newsletter2 {
+    color:#ccc;
+    font-size: small;
+}
+
+.search-bar-last input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Espacio para el ícono de búsqueda */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none; /* Elimina el borde azul al hacer clic */
+    background-color: #0f5a26;
+}
+
+.search-bar-last button {
+    position: absolute; 
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    background-color: #7DBC91;
+    font-size: smaller;
+}
+
+.lasts-icon{
+    color: #e0e0e0;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.copyright {
+    padding: 20px;
+    background-color: #093617;
+}
+
+.copyright-content {
+    text-align: center;
+    color: #cccccc;
 }
 
 
