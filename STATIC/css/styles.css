@@ -2,9 +2,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('img/fondodelapagina.jpg'); /* Fondo con imagen */
+    background-image: url('../img/fondodelapagina.png');
+    background-size: cover; /* Escala la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el fondo */
     width: 100%;
 }
+
+.content-wrapper {
+    max-width: 90%; /* Ajusta el ancho al 80% del ancho de la pantalla */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    background-color: rgba(255, 255, 255, 0.9); /* Opcional: fondo semitransparente para resaltar el contenido */
+    padding: 20px; /* Opcional: añade un poco de espacio interno */
+}
+
+
+
 
 header {
     display: flex;
@@ -66,9 +79,9 @@ header {
 /* Línea horizontal */
 .divider-horizontal {
     border: none;
-    border-top: 2px solid #a7a7a7; /* Línea horizontal sólida */
-    width: 100%; /* Ocupa el 80% del contenedor */
-    margin: 20px auto; /* Centrar y margen superior e inferior */
+    border-top: 2px solid #a7a7a7; 
+    width: 100%; 
+    margin: 20px auto; 
     margin-top: 3px;
 }
 
@@ -90,23 +103,23 @@ header {
 }
 
 .search {
-    position: relative; /* Para posicionar los elementos dentro del contenedor */
+    position: relative;  
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 600px; /* Ancho máximo del campo de búsqueda */
+    max-width: 600px; 
 }
 
 .search i.bi-search {
     position: absolute;
-    left: 10px; /* Posiciona el ícono dentro del campo */
+    left: 10px; 
     font-size: 20px;
     color: #666;
 }
 
 .search input {
     width: 100%;
-    padding: 10px 10px 10px 40px; /* Espacio para el ícono de búsqueda */
+    padding: 10px 10px 10px 40px; 
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -126,38 +139,36 @@ header {
 
 .icons {
     display: flex;
-    gap: 15px; /* Espacio entre los iconos */
-    margin-right: 200px; /* Espacio entre los iconos y el borde derecho */
-    position: relative; /* Necesario para posicionar los elementos hijos */
-    align-items: center;
+    gap: 15px; 
+     
 }
 
 .icons i {
     font-size: 24px;
     cursor: pointer;
-    position: relative; /* Para posicionar el indicador */
+    position: relative; 
 }
 
 /* Indicador de notificación */
 .icons i::after {
-    content: attr(data-count); /* Toma el valor de data-count */
+    content: attr(data-count); 
     position: absolute;
-    top: -5px; /* Ajusta según sea necesario */
-    right: -10px; /* Ajusta según sea necesario */
-    background-color: #ff3b3b; /* Color rojo para la alerta */
+    top: -5px; 
+    right: -10px; 
+    background-color: #ff3b3b; 
     color: white;
     font-size: 12px;
     width: 18px;
     height: 18px;
-    border-radius: 50%; /* Hace el círculo */
+    border-radius: 50%; 
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    border: 2px solid white; /* Añade un borde blanco alrededor */
+    border: 2px solid white; 
 }
 
-/* Si no hay notificaciones, oculta el indicador */
+
 .icons i[data-count="0"]::after {
     display: none;
 }
@@ -190,6 +201,7 @@ header {
 }
 
 
+/* stylelint-disable-next-line no-descending-specificity */
 .nav > li > a {
     text-decoration: none;
     padding: 10px 15px;
@@ -205,7 +217,7 @@ header {
 
 /* Estilos para los submenús */
 .submenu {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: absolute;
     top: 100%;
     left: 0;
@@ -223,6 +235,7 @@ header {
     white-space: nowrap;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .submenu li a {
     text-decoration: none;
     color: #333;
@@ -310,6 +323,12 @@ header {
     gap: 20px;
     justify-content: center;
     padding: 20px;
+
+
+    @media screen and (max-width : 600px) {
+        align-items: center;
+        display: flex;
+    }
 }
 
 .product-item {
@@ -441,6 +460,7 @@ header {
     align-items: center;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .product-feature {
     position: relative;
     width: 40%;
@@ -450,11 +470,10 @@ header {
     align-items: center;
   }
   
-  .product-images {
+/* stylelint-disable-next-line no-duplicate-selectors */
+.product-images {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    aspect-ratio: 1 / 1.2;
   }
   
   .product-info {
@@ -503,6 +522,7 @@ header {
     color: #333;
   }
 
+  /* stylelint-disable-next-line no-duplicate-selectors */
   .product-price {
     font-size: 18px;
     color:  #7DBC91;
@@ -743,7 +763,6 @@ header {
 .image-card .description {
     font-size: 16px;
     color: #555;
-    margin: 0 10px;
     line-height: 1.5;
 }
 
