@@ -46,9 +46,16 @@ header {
 }
 
 .title a {
-    color: #7DBC91; 
+    color: #317743; /* Verde oscuro con alto contraste */ 
     text-decoration: none; 
 }
+
+.title a:focus {
+    outline: 3px solid #f39c12; /* Borde naranja al enfocar */
+    text-decoration: underline;  /* Subrayado */
+}
+
+
 
 .selectors {
     display: flex;
@@ -75,6 +82,11 @@ header {
     position: absolute;
     background-color: #fff;
     z-index: 1;
+}
+
+button:focus {
+    outline: 3px solid #f39c12; /* Borde visible al enfocar el botón */
+    background-color: #ffcc00;  /* Cambiar el color de fondo al recibir el foco */
 }
 
 .dropdown-content a {
@@ -176,6 +188,23 @@ header {
     cursor: pointer;
 }
 
+.search button:focus{   
+        outline: 3px solid #f39c12; /* Borde visible al enfocar el botón */
+        background-color: #ffcc00;  /* Cambiar el color de fondo al recibir el foco */
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+
 .icons {
     display: flex;
     gap: 15px;
@@ -221,7 +250,7 @@ header {
     padding: 0;
     display: flex;
     gap: 20px;
-    background-color: #7DBC91;
+    background-color: #B9DFC8;
 }
 
 .nav > li {
@@ -277,7 +306,7 @@ header {
     margin: 0;
     display: flex;
     gap: 20px;
-    background-color: #7DBC91;
+    background-color: #B9DFC8;
     padding: 10px;
 }
 
@@ -286,14 +315,20 @@ header {
 .nav > li > a {
     text-decoration: none;
     padding: 10px 15px;
-    background-color: #7DBC91;
-    color: #fff;
+    background-color: #B9DFC8; /* Fondo original */
+    color: #0F260F; /* Texto verde oscuro con contraste AAA */
     display: block;
     border-radius: 5px;
 }
 
 .nav > li > a:hover {
-    background-color:  #7DBC91;
+    background-color: #7DBC91; /* Fondo igual */
+    color: #000000; /* Un tono más oscuro para el estado hover */
+}
+
+.nav > li > a:focus {
+    outline: 3px solid #f39c12; /* Borde naranja al enfocar */
+    text-decoration: underline;  /* Subrayado */
 }
 
 /* Estilos para los submenús */
@@ -305,15 +340,18 @@ header {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background-color: #fff;
     border-radius: 5px;
     min-width: 160px;
     z-index: 1;
 }
 
+.submenu ul{
+    background-color: #B9DFC8;
+}
 .submenu li {
     padding: 10px;
     white-space: nowrap;
+    
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
@@ -321,6 +359,7 @@ header {
     text-decoration: none;
     color: #333;
     display: block;
+    
 }
 
 
@@ -353,18 +392,19 @@ header {
     display: flex;
     align-items: center; /* Alinea ambos divs verticalmente */
     padding: 20px;
-    background-color: #fff;
+    background-color: #FFFFFF; /* Fondo blanco */
 }
 
 .timer h1 {
     font-size: 28px;
     font-weight: bold;
     margin: 0;
+    color: #000000; /* Negro para máximo contraste */
 }
 
 .timer p {
     font-size: 14px;
-    color: #aaa;
+    color: #2E2E2E; /* Oscuro para contraste AAA */
     margin: 5px 0 0;
 }
 
@@ -384,19 +424,20 @@ header {
 .number {
     font-size: 32px;
     font-weight: bold;
-    color:  #7DBC91;
+    color: #2E7D59; /* Verde más oscuro para cumplir AAA */
 }
 
 .label {
     font-size: 14px;
-    color: #333;
-    
+    color: #1A1A1A; /* Más oscuro para cumplir AAA */
 }
 
 .separator {
     font-size: xx-large;
     margin: 0 5px;
+    color: #2E2E2E; /* Oscuro para cumplir AAA */
 }
+
 
 
 .product-grid {
@@ -405,6 +446,16 @@ header {
     justify-content: center;
     padding: 20px;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en líneas adicionales */
+    margin-top: 40px; /* Espacio adicional para que el título no esté pegado a la parte superior */
+}
+
+/* Estilo para el encabezado H1 */
+.product-grid h1 {
+    text-align: center; /* Centra el título */
+    font-size: 32px; /* Tamaño adecuado para el título */
+    font-weight: bold; /* Hace que el título sea más destacado */
+    margin-bottom: 20px; /* Espacio entre el título y los productos */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
 }
 
 /* Media Query para pantallas más pequeñas (menos de 600px) */
@@ -434,6 +485,10 @@ header {
     .product-image {
         width: 100%;
         height: auto; /* Asegura que la imagen se ajuste al contenedor */
+    }
+
+    .product-grid h1 {
+        font-size: 24px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
     }
 }
 
@@ -471,7 +526,7 @@ header {
 }
 
 .badge.sale {
-    background-color: #c00;
+    background-color: rgb(117, 0, 0);
 }
 
 .product-title {
@@ -492,6 +547,7 @@ header {
     font-weight: bold;
     display: inline-block;
 }
+
 
 .divider-green {
     border-bottom: 3px solid #7DBC91;
@@ -541,6 +597,10 @@ header {
     text-decoration: none;
     color: #333;
     font-size: 16px;
+}
+
+.categories li a:focus{
+    color: #7DBC91;
 }
 
 
@@ -696,7 +756,7 @@ header {
 .promo-banner {
     width: 30%;   
 }
-/* Media Queries */
+
 
 /* Pantallas medianas y pequeñas (tabletas y móviles) */
 @media (max-width: 768px) {
@@ -709,6 +769,7 @@ header {
     .categories{
         align-items: center;
     }
+    /* stylelint-disable-next-line rule-empty-line-before */
     .product-main,
     .promo-banner {
         flex: 1 1 100%; /* Cada elemento ocupa el 100% del ancho */
@@ -752,63 +813,6 @@ header {
     padding: 20px;
 }
 
-/* Sidebar de categorías */
-.categories {
-    flex: 0 0 250px;
-    border-right: 1px solid #e0e0e0;
-    padding: 0;
-}
-
-/* Estilos de los títulos */
-.categories h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-/* Estilos de la lista de categorías */
-.categories ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-left: 0;
-}
-
-/* Estilos de los elementos de la lista */
-.categories li {
-    margin-bottom: 10px;
-}
-
-/* Estilos de los enlaces de la lista */
-.categories li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-}
-
-
-/* Contenido principal del producto */
-.product-main {
-    flex: 2;
-    display: flex;
-    gap: 20px;
-    height: 100%;
-}
-
-.product-images {
-    width: 20%;
-    border-radius: 8px;
-    align-items: center;
-}
-
-.product-feature {
-    position: relative;
-    width: 100%; /* Asegura que el contenedor ocupe el 100% de su espacio */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /* stylelint-disable-next-line no-duplicate-selectors */
 .product-feature {
     position: relative;
@@ -823,51 +827,6 @@ header {
 .product-images {
     width: 100%;
     height: 100%;
-  }
-  
-  .product-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    
-  }
-  
-  .product-actions {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    top: 50%;
-    width: 100%;
-    position: absolute;
-  }
-  
-  .product-details {
-    position: absolute;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 12px;
-    left: 0%;
-    width: 100%;
-  }
-  
-  .ratings {
-    margin-bottom: 10px;
-    color: #f7b500;
-  }
-  
-  .product-titles {
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
   }
 
   /* stylelint-disable-next-line no-duplicate-selectors */
@@ -878,65 +837,16 @@ header {
     display: inline-block;
 }
 
-.product-actions i{
-    cursor: pointer;
-    font-size: 24px;
-    color:  #000201;
+.title-a123{
+    font-size: smaller;
 }
 
-.especial {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: #7DBC91;
-    border-radius: 100%;
-    cursor: pointer;
-  }
-  
-  .especial i {
-    font-size: 24px;
-    color: white;
-  }
-
-  .related-product{
-    position: relative;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    
-  }
-
-  .related-product-item{
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-
-  }
-
-  .estrellas{
-    color: #f7b500;
-  }
-
-
-
-  .product-thumbsnail{
-    width: 100%;
-    height: 100%;
-  }
-
-
-  .related-product-price{
-    color: #7DBC91;
-  }
-  
-/* Banner de promoción */
-.promo-banner {
-    width: 30%;   
+.title-b456{
+    font-size: smaller;
 }
+  
+ 
+
 @media (max-width: 768px) {
     .container-shop {
         flex-direction: column; /* Cambia la dirección del flexbox a vertical */
@@ -1082,7 +992,7 @@ header {
 /* Calificaciones */
 .rating-a123,
 .rating-b456 {
-    color: #f7b500;
+    color: #694a00;
     font-size: 14px;
 }
 
@@ -1097,7 +1007,7 @@ header {
 /* Precios */
 .price-a123,
 .price-b456 {
-    color: #7DBC91;
+    color: #2a5f2a;
     font-size: 14px;
 }
 
@@ -1125,14 +1035,22 @@ header {
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column; /* Ahora usamos flex-direction column para apilar los elementos */
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-.blog p{
-    color: #a7a7a7;
-    justify-content: center;
-    align-items: center;
+.blog h1 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.blog h2 {
+    color: #777;
+    font-size: 16px;
+    text-align: center;
 }
 
 /* Estilo base para la sección de las imágenes */
@@ -1142,8 +1060,6 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    flex-wrap: wrap; /* Asegura que las tarjetas se acomoden si el espacio es limitado */
-    margin: 20px 0;
 }
 
 .image-card {
@@ -1192,6 +1108,36 @@ header {
     color: #7DBC91; /* Cambiar color al pasar el cursor */
 }
 
+/* Estilos para los enlaces dentro de los cards */
+.read-more {
+    color: #317743; /* Verde oscuro con buen contraste */
+    text-decoration: none; /* Eliminar subrayado por defecto */
+}
+
+/* Estilos para los enlaces cuando el foco es visible */
+.read-more:focus {
+    outline: 3px solid #f39c12; /* Borde naranja cuando está enfocado */
+    text-decoration: underline; /* Subrayado para indicar foco */
+}
+
+/* Estilo para los enlaces al pasar el cursor (hover) */
+.read-more:hover {
+    color: #f39c12; /* Cambiar color al pasar el cursor */
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/* Asegúrate de que el contraste es suficiente */
+.read-more {
+    font-weight: bold;
+    font-size: 1.1em; /* Tamaño más grande para mayor legibilidad */
+}
+
+/* Agregar un fondo o borde de enfoque adicional si es necesario */
+.read-more:focus-visible {
+    background-color: rgba(255, 156, 0, 0.2); /* Fondo claro al recibir foco */
+}
+
+
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
     .three-image-section {
@@ -1215,6 +1161,7 @@ header {
         font-size: 14px; /* Reducir el tamaño del enlace "Leer más" */
     }
 }
+
 
 
 /* Estilo base para la sección de imágenes */
@@ -1292,6 +1239,11 @@ header {
     color: #7DBC91;
 }
 
+.email a:focus {
+    outline: 3px solid #f39c12; /* Borde naranja cuando está enfocado */
+    text-decoration: underline; /* Subrayado para indicar foco */
+}
+
 .change-color {
     color: red;
     font-size: larger;
@@ -1340,7 +1292,7 @@ header {
     align-items: center;
     justify-content: space-between; /* Espaciado entre los elementos */
     text-align: center;
-    background-color: #0f5a26;
+    background-color: #0c421c;
     padding: 30px;
     width: 100%;
     box-sizing: border-box;
@@ -1373,6 +1325,11 @@ header {
     font-size: small;
 }
 
+.newsletter-title {
+    font-weight: bold;
+    font-size:medium
+}
+
 .search-bar-last input {
     width: 100%;
     padding: 10px 10px 10px 40px;
@@ -1390,6 +1347,16 @@ header {
     transform: translateY(-50%);
     background-color: #7DBC91;
     font-size: smaller;
+}
+
+.search-bar-last button:focus {
+    outline: 3px solid #f39c12; /* Borde naranja */
+    background-color: #f39c12; /* Cambiar fondo cuando se enfoca */
+}
+
+.search-bar-last input:focus {
+    border-color: #f39c12; /* Borde naranja para indicar enfoque */
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.5); /* Sombra de enfoque */
 }
 
 .lasts-icon {

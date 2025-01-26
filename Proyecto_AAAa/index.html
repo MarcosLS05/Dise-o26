@@ -12,7 +12,7 @@
     <title>Online Store</title>
 </head>
 <body>
-    <section class="content-wrapper">
+<section class="content-wrapper">
 
     
     <header>
@@ -34,10 +34,12 @@
         </div>
     
         <div class="search">
+            <label for="search-input" class="sr-only">Buscar</label>
             <i class="bi bi-search"></i> 
-            <input type="text" placeholder="Search">
+            <input id="search-input" type="text" placeholder="Search">
             <button>Search</button> 
-        </div>       
+        </div>
+               
     
         <div class="icons">
             <i class="bi bi-person" data-count="0"></i>
@@ -250,6 +252,7 @@
 </section>
 
 
+
 <section class="manguera-container">
     <div class="manguera">
         <img src="img/manguera.png" alt="Manguera 1">
@@ -268,6 +271,8 @@
     </div>
 </section>
 <section class="product-grid">
+    <h1>Our Products</h1> <!-- Título principal de la página -->
+    
     <article class="product-item">
         <div class="badges">
             <span class="badge new">New</span>
@@ -282,8 +287,7 @@
     </article>
 
     <article class="product-item">
-        <div class="badges">
-        </div>
+        <div class="badges"></div>
         <img src="img/producto2.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
         <h2 class="product-title">Indoor Herb Garden Starter Kit - Organic</h2>
         <div class="rating">
@@ -291,49 +295,47 @@
         </div>
         <p class="product-price">$55.99</p>
     </article>
+
     <article class="product-item">
         <div class="badges">
-            <div class="badges">
-                <span class="badge new">New</span>
-            </div>
+            <span class="badge new">New</span>
         </div>
-        <img src="img/producto.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
+        <img src="img/producto.png" alt="Keter Easy Grow 31.7 Gallon Raised Garden Bed" class="product-image">
         <h2 class="product-title">Keter Easy Grow 31.7 Gallon Raised Garden Bed</h2>
         <div class="rating">
             ★★★★☆
         </div>
         <p class="product-price">$69.99</p>
     </article>
+
     <article class="product-item">
         <div class="badges">
-            <div class="badges">
-                <span class="badge sale">Sale</span>
-            </div>
+            <span class="badge sale">Sale</span>
         </div>
-        <img src="img/producto4.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
-        <h2 class="product-title">Sloggers Women's Waterproff Rain and Garden</h2>
+        <img src="img/producto4.png" alt="Sloggers Women's Waterproof Rain and Garden" class="product-image">
+        <h2 class="product-title">Sloggers Women's Waterproof Rain and Garden</h2>
         <div class="rating">
             ★★★★☆
         </div>
         <p class="product-price">$49.99</p>
     </article>
+
     <article class="product-item">
-        <div class="badges">
-            
-        </div>
-        <img src="img/producto5.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
+        <div class="badges"></div>
+        <img src="img/producto5.png" alt="My Fairy Garden Nature Cottage - Grow Play Set" class="product-image">
         <h2 class="product-title">My Fairy Garden Nature Cottage - Grow Play Set</h2>
         <div class="rating">
             ★★★★☆
         </div>
         <p class="product-price">$39.99</p>
-    </article> 
+    </article>
 </section>
 
-<section class="shop-container">
+
+<section class="container-shop">
     <!-- Sidebar de categorías -->
     <aside class="categories">
-        <h2>Soil & Fertilizers</h2>
+        <h1>Soil & Fertilizers</h1>
         <ul>
             <li><a href="#">Organic Seeds</a></li>
             <li><a href="#">Vegetable Starts</a></li>
@@ -352,7 +354,7 @@
                 <img src="img/hacha.png" alt="Product 2" class="image-a123">
                 <div class="info-a123">
                     <div class="rating-a123">★★★★☆</div>
-                    <h4 class="title-a123">HomeImpro Outdoor Solar Lights Garden Crackle</h4>
+                    <h1 class="title-a123">HomeImpro Outdoor Solar Lights Garden Crackle</h1>
                     <p class="price-a123">$69.99</p>
                 </div>
             </div>
@@ -360,7 +362,7 @@
                 <img src="img/rastrillo.png" alt="Product 3" class="image-a123">
                 <div class="info-a123">
                     <div class="rating-a123">★★★★☆</div>
-                    <h4 class="title-a123">Auger Drill Bit Garden Plant Flower Bulb Auger</h4>
+                    <h1 class="title-a123">Auger Drill Bit Garden Plant Flower Bulb Auger</h1>
                     <p class="price-a123">$39.99</p>
                 </div>
             </div>
@@ -368,7 +370,7 @@
                 <img src="img/carrito.png" alt="Product 4" class="image-a123">
                 <div class="info-a123">
                     <div class="rating-a123">★★★★☆</div>
-                    <h4 class="title-a123">Garden of Life Dr. Formulated Probiotics for Women</h4>
+                    <h1 class="title-a123">Garden of Life Dr. Formulated Probiotics for Women</h1>
                     <p class="price-a123">$90.00</p>
                 </div>
             </div>
@@ -380,7 +382,7 @@
                 <img src="img/nose.png" alt="Product 2" class="image-b456">
                 <div class="info-b456">
                     <div class="rating-b456">★★★★☆</div>
-                    <h4 class="title-b456">HomeImpro Outdoor Solar Lights Garden Crackle</h4>
+                    <h1 class="title-b456">HomeImpro Outdoor Solar Lights Garden Crackle</h1>
                     <p class="price-b456">$69.99</p>
                 </div>
             </div>
@@ -388,7 +390,7 @@
                 <img src="img/bol.png" alt="Product 3" class="image-b456">
                 <div class="info-b456">
                     <div class="rating-b456">★★★★☆</div>
-                    <h4 class="title-b456">Auger Drill Bit Garden Plant Flower Bulb Auger</h4>
+                    <h1 class="title-b456">Auger Drill Bit Garden Plant Flower Bulb Auger</h1>
                     <p class="price-b456">$39.99</p>
                 </div>
             </div>
@@ -396,7 +398,7 @@
                 <img src="img/cogollos.png" alt="Product 4" class="image-b456">
                 <div class="info-b456">
                     <div class="rating-b456">★★★★☆</div>
-                    <h4 class="title-b456">Garden of Life Dr. Formulated Probiotics for Women</h4>
+                    <h1 class="title-b456">Garden of Life Dr. Formulated Probiotics for Women</h1>
                     <p class="price-b456">$90.00</p>
                 </div>
             </div>
@@ -406,41 +408,49 @@
         <img src="img/holamundo.png" alt="Manguera 1">
     </div>
 </section>
+
+
 <section class="fondoGrande">
     <div class="fondoAñadido">
         <img src="img/fondoGrande2.png" alt="Manguera 1" class="fondoImagen">
     </div>
 </section>
+
+
 <section class="corto">
     <div class="blog">
         <h1>From Our Blog</h1>
-        <p>Don't miss our latest update</p>
+        <h2>Don't miss our latest update</h2>
+    </div>
+    <div class="three-image-section">
+        <div class="image-card">
+            <img src="img/info2.png" alt="Nike Victory Swim Collection" class="image">
+            <div class="caption">Performance · 28 Jun, 2019 · by Administrator</div>
+            <h3 class="title">Introducing the Nike Victory Swim Collection</h3>
+            <p class="description">This is a description for Image 1. It gives more details about the image content.</p>
+            <a href="#" class="read-more">Read more about Nike Victory Swim</a>
+        </div>
+        <div class="image-card">
+            <img src="img/info1.png" alt="KOBE Gets the Protro Treatment" class="image">
+            <div class="caption">Performance · 28 Jun, 2019 · by Administrator</div>
+            <h3 class="title">The KOBE Gets the Protro Treatment</h3>
+            <p class="description">This is a description for Image 2. It gives more details about the image content.</p>
+            <a href="#" class="read-more">Read more about Protro de KOBE treatment</a>
+        </div>
+        <div class="image-card">
+            <img src="img/info3.png" alt="Russell's Speed and Style" class="image">
+            <div class="caption">Performance · 28 Jun, 2019 · by Administrator</div>
+            <h3 class="title">Speed and Style: the Double-Life of Russell</h3>
+            <p class="description">This is a description for Image 3. It gives more details about the image content.</p>
+            <a href="#" class="read-more">Discover more about Russell style</a>
+        </div>
     </div>
 </section>
-<section class="three-image-section">
-    <div class="image-card">
-        <img src="img/info2.png" alt="Image 1" class="image">
-        <div class="caption">Performance · 28 Jun, 2019 · by Administrator</div>
-        <h3 class="title">Introducing the Nike Victory Swim Collection</h3>
-        <p class="description">This is a description for Image 1. It gives more details about the image content.</p>
-        <a href="#" class="read-more">Read More</a>
-    </div>
-    <div class="image-card">
-        <img src="img/info1.png" alt="Image 2" class="image">
-        <div class="caption">Performance · 28 Jun, 2019 · by Administrator</div>
-        <h3 class="title">The KOBE Gets the Protro Treatment</h3>
-        <p class="description">This is a description for Image 2. It gives more details about the image content.</p>
-        <a href="#" class="read-more">Read More</a>
-    </div>
-    <div class="image-card">
-        <img src="img/info3.png" alt="Image 3" class="image">
-        <div class="caption">Performance · 28 Jun, 2019 · by Administrator</div>
-        <h3 class="title">Speed and Style: the Double-Life of Russell</h3>
-        <p class="description">This is a description for Image 3. It gives more details about the image content.</p>
-        <a href="#" class="read-more">Read More</a>
-    </div>
-</section>
+
+
 <hr class="divider-green">
+
+
 <section class="four-image-section">
     <div class="image-item">
         <img src="img/cizalla.png" alt="Image 1" class="image">
@@ -459,6 +469,8 @@
         <h4 class="image-title">Support a Community that Cares</h4>
     </div>
 </section>
+
+
 <section class="user-info">
     <div class="footer">
         <div class="footer-content">
@@ -502,21 +514,24 @@
         </div>
     </div>
 </section>
+
+
 <section class="last-one">
 
     <div class="last-icon">
         <i class="bi bi-telegram"></i>
     </div>
     <div class="newsletter">
-        <h5>SIGN UP TO NEWSLETTER</h5>
+        <h1 class="newsletter-title">SIGN UP TO NEWSLETTER</h1>
     </div>
     <div class="search-bar-last">
-         
-        <input type="text" placeholder="Your email...">
+        <label for="email-input" class="sr-only">Your email</label>
+        <input id="email-input" type="text" placeholder="Your email...">
         <button>Subscribe</button> 
     </div>
+    
     <div class="newsletter2">
-        <h5>KEEP IN TOUCH</h5> 
+        <h1 class="newsletter-title">KEEP IN TOUCH</h1> 
     </div>
     <div class="lasts-icon">
         <i class="bi bi-facebook"></i>
@@ -526,12 +541,17 @@
         <i class="bi bi-linkedin"></i>
     </div>
 </section>
+
+
 <section class="copyright">
     <div class="copyright-content">
         <p>Copyright c 2020 <strong>ekommart</strong>. All Rights Reserved.</p>
     </div>
 </section>
+
+
 </section>
+
 
 </body>
 </html>
