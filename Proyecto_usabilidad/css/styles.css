@@ -1,0 +1,1289 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/fondodelapagina.png');
+    background-size: cover; /* Escala la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el fondo */
+    width: 100%;
+    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    body {
+        background-attachment: fixed; /* El fondo queda fijo mientras el usuario hace scroll */
+        font-size: 14px; /* Reduce el tamaño del texto base para dispositivos pequeños */
+        padding: 10px; /* Agrega un pequeño margen interior al contenido */
+    }
+}
+
+
+.content-wrapper {
+    max-width: 90%; /* Ajusta el ancho al 80% del ancho de la pantalla */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    background-color: rgba(255, 255, 255, 0.9); /* Opcional: fondo semitransparente para resaltar el contenido */
+    padding: 20px; /* Opcional: añade un poco de espacio interno */
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en una línea */
+}
+
+.title {
+    font-weight: bold;
+    margin: 0;
+    flex: 1; /* Ocupará más espacio en línea según sea necesario */
+}
+
+.title a {
+    color: #7DBC91; 
+    text-decoration: none; 
+}
+
+.selectors {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .title {
+        margin-bottom: 10px;
+        text-align: center; 
+    }
+
+    .selectors {
+        width: 100%; /* Ocupa el ancho completo */
+        justify-content: space-around; /* Espacio entre botones */
+        flex-wrap: wrap; /* Permite que los elementos se ajusten en filas */
+    }
+
+    .dropbtn {
+        font-size: 12px; 
+        padding: 8px; 
+    }
+}
+
+
+/* Línea horizontal */
+.divider-horizontal {
+    border: none;
+    border-top: 2px solid #a7a7a7; 
+    width: 100%; 
+    margin: 20px auto; 
+    margin-top: 3px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en una línea */
+}
+
+.ekommart {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.search {
+    position: relative;  
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px; /* Agregar algo de espacio entre la búsqueda y los íconos */
+}
+
+.search i.bi-search {
+    position: absolute;
+    left: 10px; 
+    font-size: 20px;
+    color: #666;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search button {
+    position: absolute; 
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    background-color: #7DBC91;
+    border: none;
+    font-size: 16px;
+    padding: 5px 15px; 
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    align-items: center; /* Alinea los íconos verticalmente */
+}
+
+.icons i {
+    font-size: 24px;
+    cursor: pointer;
+    position: relative; 
+}
+
+/* Indicador de notificación */
+.icons i::after {
+    content: attr(data-count); 
+    position: absolute;
+    top: -5px; 
+    right: -10px; 
+    background-color: #ff3b3b; 
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid white; 
+}
+
+.icons i[data-count="0"]::after {
+    display: none;
+}
+
+.button {
+    margin-right: 20px;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    background-color: #7DBC91;
+}
+
+.nav > li {
+    position: relative;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    .header-section {
+        flex-direction: column; /* Cambia la disposición a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .search {
+        max-width: 100%; /* Asegura que la barra de búsqueda ocupe todo el ancho disponible */
+        margin-bottom: 10px; /* Espacio entre la búsqueda y los íconos */
+    }
+
+    .icons {
+        flex-direction: column; /* Coloca los íconos en columna */
+        gap: 10px; /* Espacio más pequeño entre los íconos */
+    }
+
+    .nav {
+        flex-direction: column; /* Cambia los elementos del menú a columna */
+        gap: 10px; /* Espacio reducido entre los enlaces del menú */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search input, .search button {
+        font-size: 14px; /* Reducir el tamaño del texto en input y button */
+        padding: 8px 8px 8px 35px; /* Ajuste de padding para que se vea bien en pantallas más pequeñas */
+    }
+
+    .search i.bi-search {
+        font-size: 18px; /* Reducir el tamaño del icono */
+    }
+
+    .icons i {
+        font-size: 20px; /* Reducir tamaño de íconos */
+    }
+
+    .money h2 {
+        font-size: 16px; /* Ajuste de tamaño del texto en el dinero */
+    }
+}
+
+
+/* Estilos para el menú principal */
+.display-section {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    background-color: #7DBC91;
+    padding: 10px;
+}
+
+
+/* stylelint-disable-next-line no-descending-specificity */
+.nav > li > a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #7DBC91;
+    color: #fff;
+    display: block;
+    border-radius: 5px;
+}
+
+.nav > li > a:hover {
+    background-color:  #7DBC91;
+}
+
+/* Estilos para los submenús */
+.submenu {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.submenu li {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.submenu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+
+.submenu li a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.nav > li:hover .submenu {
+    display: block;
+}
+
+.image-container {
+    width: 100%;
+    height: auto; 
+}
+
+.image-container img {
+    width: 100%;   
+    height: 20%;  
+    
+}
+
+.timer {
+    padding: 20px;
+    
+}
+
+.deals-section {
+    display: flex;
+    align-items: center; /* Alinea ambos divs verticalmente */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.timer h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.timer p {
+    font-size: 14px;
+    color: #aaa;
+    margin: 5px 0 0;
+}
+
+.contador {
+    display: flex;
+    align-items: center; /* Alinea los bloques del contador verticalmente */
+    gap: 15px; /* Espacio entre los elementos dentro del contador */
+    justify-content: flex-end; /* Asegura que esté alineado a la derecha */
+}
+
+.time {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.number {
+    font-size: 32px;
+    font-weight: bold;
+    color:  #7DBC91;
+}
+
+.label {
+    font-size: 14px;
+    color: #333;
+    
+}
+
+.separator {
+    font-size: xx-large;
+    margin: 0 5px;
+}
+
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en líneas adicionales */
+}
+
+/* Media Query para pantallas más pequeñas (menos de 600px) */
+@media screen and (max-width: 600px) {
+    .product-item {
+        width: 100%; /* Ocupa el 100% del ancho disponible */
+        max-width: 300px; /* Máximo ancho para evitar que se estire demasiado */
+    }
+
+    .product-grid {
+        justify-content: center; /* Centra los productos */
+        gap: 10px; /* Reduce el espacio entre los productos */
+    }
+
+    .product-title {
+        font-size: 14px; /* Reduce el tamaño del título */
+    }
+
+    .product-price {
+        font-size: 16px; /* Reduce el tamaño del precio */
+    }
+
+    .rating {
+        font-size: 12px; /* Reduce el tamaño de la calificación */
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto; /* Asegura que la imagen se ajuste al contenedor */
+    }
+}
+
+.product-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    width: 250px; /* Ajuste inicial para pantallas grandes */
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.badges {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.badge {
+    padding: 6px 10px; /* Ajustado para que el badge no sea tan grande */
+    font-size: 12px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.badge.new {
+    background-color: #033c;
+}
+
+.badge.sale {
+    background-color: #c00;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.rating {
+    font-size: 14px;
+    color: #f7b500;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #7DBC91;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.divider-green {
+    border-bottom: 3px solid #7DBC91;
+    border-top: 3px solid #7DBC91;
+    width: 95%;
+    bottom: 10px;
+}
+
+/* Contenedor principal para el layout */
+.shop-container {
+    display: flex;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Sidebar de categorías */
+.categories {
+    flex: 0 0 250px;
+    border-right: 1px solid #e0e0e0;
+    padding: 0;
+}
+
+/* Estilos de los títulos */
+.categories h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilos de la lista de categorías */
+.categories ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Estilos de los elementos de la lista */
+.categories li {
+    margin-bottom: 10px;
+}
+
+/* Estilos de los enlaces de la lista */
+.categories li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+
+/* Contenido principal del producto */
+.product-main {
+    flex: 2;
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+
+.product-images {
+    width: 20%;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.product-feature {
+    position: relative;
+    width: 100%; /* Asegura que el contenedor ocupe el 100% de su espacio */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+.product-feature {
+    position: relative;
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+/* stylelint-disable-next-line no-duplicate-selectors */
+.product-images {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .product-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  .product-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    top: 50%;
+    width: 100%;
+    position: absolute;
+  }
+  
+  .product-details {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 12px;
+    left: 0%;
+    width: 100%;
+    ;
+  }
+  
+  .ratings {
+    margin-bottom: 10px;
+    color: #f7b500;
+  }
+  
+  .product-titles {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* stylelint-disable-next-line no-duplicate-selectors */
+  .product-price {
+    font-size: 18px;
+    color:  #7DBC91;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.product-actions i{
+    cursor: pointer;
+    font-size: 24px;
+    color:  #000201;
+}
+
+.especial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #7DBC91;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  
+  .especial i {
+    font-size: 24px;
+    color: white;
+  }
+
+  .related-product{
+    position: relative;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    
+  }
+
+  .related-product-item{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .estrellas{
+    color: #f7b500;
+  }
+
+
+
+  .product-thumbsnail{
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .related-product-price{
+    color: #7DBC91;
+  }
+  
+/* Banner de promoción */
+.promo-banner {
+    width: 30%;   
+}
+
+
+/* Pantallas medianas y pequeñas (tabletas y móviles) */
+@media (max-width: 768px) {
+    .shop-container {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        gap: 20px; /* Espacio entre los elementos */
+        align-items: stretch; /* Los elementos ocuparán el ancho completo */
+    }
+
+    .categories{
+        align-items: center;
+    }
+    /* stylelint-disable-next-line rule-empty-line-before */
+    .product-main,
+    .promo-banner {
+        flex: 1 1 100%; /* Cada elemento ocupa el 100% del ancho */
+        max-width: 100%; /* Asegura que no excedan el ancho del contenedor */
+    }
+
+    .product-feature {
+        display: none !important; /* Oculta completamente el div */
+    }
+
+    .product-main {
+        flex-direction: column; /* Apila los productos relacionados */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .related-product {
+        flex-direction: column; /* Apila los productos relacionados */
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .related-product-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promo-banner img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+.container-shop {
+    display: flex;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+.product-feature {
+    position: relative;
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+/* stylelint-disable-next-line no-duplicate-selectors */
+.product-images {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* stylelint-disable-next-line no-duplicate-selectors */
+  .product-price {
+    font-size: 18px;
+    color:  #7DBC91;
+    font-weight: bold;
+    display: inline-block;
+}
+  
+ 
+
+@media (max-width: 768px) {
+    .container-shop {
+        flex-direction: column; /* Cambia la dirección del flexbox a vertical */
+        align-items: center; /* Centra los elementos */
+        gap: 20px;
+        padding: 10px; /* Reduce los márgenes en pantallas pequeñas */
+    }
+
+    .categories {
+        width: 100%; /* Asegura que el sidebar ocupe todo el ancho */
+        border-right: none; /* Elimina el borde lateral */
+        text-align: center; /* Centra el contenido */
+        padding: 10px;
+    }
+
+    .categories h2 {
+        font-size: 18px; /* Reduce el tamaño del título */
+    }
+
+    .categories ul {
+        display: flex;
+        flex-direction: column; /* Asegura que los elementos se mantengan en columnas */
+        align-items: center; /* Centra los enlaces */
+        gap: 10px;
+    }
+
+    .container-a123 {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        display: flex;
+        flex-direction: column; /* Los bloques se apilan verticalmente */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .block-a123,
+    .block-b456 {
+        display: flex;
+        flex-direction: column; /* Asegura que los productos se apilen verticalmente */
+        align-items: center; /* Centra los productos */
+        gap: 15px;
+    }
+
+    .item-a123, .item-b456 {
+        width: 90%; /* Ajusta el tamaño de los productos para que se vean proporcionados */
+        text-align: center; /* Centra el texto y las imágenes */
+    }
+
+    .image-a123, .image-b456 {
+        width: 100%; /* Asegura que las imágenes se ajusten al contenedor */
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .holamundo {
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        text-align: center; /* Centra el contenido */
+    }
+
+    .holamundo img {
+        width: 30%; /* Reduce el tamaño del banner */
+        height: auto;
+    }
+}
+
+
+.manguera-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    gap: 40px;
+}
+
+.manguera, .manguera2 {
+    width: 40%; 
+}
+
+.manguera img, .manguera2 img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+}
+
+.garden-tools {
+    display: flex; 
+    align-items: center; 
+    width: 100%;
+    padding: 30px; 
+}
+
+.garden{
+    color: #7DBC91;
+}
+
+/* Contenedor principal */
+.container-a123 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Bloques de productos */
+.block-a123,
+.block-b456 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 48%;
+}
+
+/* Productos individuales */
+.item-a123,
+.item-b456 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    /* stylelint-disable-next-line alpha-value-notation */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Imágenes */
+.image-a123,
+.image-b456 {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Información del producto */
+.info-a123,
+.info-b456 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Calificaciones */
+.rating-a123,
+.rating-b456 {
+    color: #f7b500;
+    font-size: 14px;
+}
+
+/* Títulos de los productos */
+.title-a123,
+.title-b456 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Precios */
+.price-a123,
+.price-b456 {
+    color: #7DBC91;
+    font-size: 14px;
+}
+
+.fondoGrande {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.fondoAñadido {
+    width: 100%;
+}
+
+.fondoImagen {
+    width: 100%;
+    height: auto; 
+    display: block; 
+}
+
+.corto {
+    top: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog p{
+    color: #a7a7a7;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo base para la sección de las imágenes */
+.three-image-section {
+    display: flex;
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap; /* Asegura que las tarjetas se acomoden si el espacio es limitado */
+    margin: 20px 0;
+}
+
+.image-card {
+    flex: 1;
+    max-width: 30%; /* Tres tarjetas, cada una ocupa un 30% del ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px; /* Espacio entre los elementos internos */
+}
+
+.image-card img.image {
+    width: 100%;
+    height: auto; /* Mantener proporción */
+}
+
+.image-card .caption {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.image-card .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.image-card .description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.image-card .read-more {
+    font-size: 16px;
+    color: #7DBC91;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.image-card .read-more:hover {
+    color: #7DBC91; /* Cambiar color al pasar el cursor */
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .three-image-section {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+    }
+
+    .image-card {
+        max-width: 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
+        margin-bottom: 20px; /* Añadir espacio entre las tarjetas */
+    }
+
+    .image-card .title {
+        font-size: 16px; /* Reducir el tamaño del título en pantallas pequeñas */
+    }
+
+    .image-card .description {
+        font-size: 14px; /* Reducir el tamaño de la descripción */
+    }
+
+    .image-card .read-more {
+        font-size: 14px; /* Reducir el tamaño del enlace "Leer más" */
+    }
+}
+
+
+/* Estilo base para la sección de imágenes */
+.four-image-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las imágenes */
+    width: 100%;
+    flex-wrap: wrap; /* Permite que se acomoden en varias filas si no hay espacio suficiente */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: row; /* Cambié de column a row */
+    align-items: center; /* Alinea la imagen y el título verticalmente */
+    text-align: left; /* Alinea el título a la izquierda */
+    flex: 1;
+}
+
+.image-item img.image {
+    width: 20%; /* La imagen ocupa el 80% del contenedor */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle un estilo */
+}
+
+.image-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .four-image-section {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+    }
+
+    .image-item {
+        max-width: 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
+        margin-bottom: 20px; /* Añadir espacio entre las tarjetas */
+    }
+
+    .image-item img.image {
+        width: 15%; /* Ajustar el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .image-title {
+        font-size: 14px; /* Reducir el tamaño del título */
+    }
+}
+
+
+/* Estilo base para el footer */
+.user-info {
+    width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px; 
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden cuando no hay suficiente espacio */
+}
+
+.footer-item h3 {
+    font-size: small;
+}
+
+.email a {
+    color: #7DBC91;
+}
+
+.change-color {
+    color: red;
+    font-size: larger;
+}
+
+.more-content-two h3{
+    font-size: smaller;
+    color: #000201;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        align-items: flex-start; /* Alineación vertical */
+    }
+
+    .footer-item,
+    .more-content,
+    .more-content-two,
+    .more-content-three {
+        width: 100%; /* Cada columna ocupa el 100% del contenedor en pantallas pequeñas */
+        margin-bottom: 20px; /* Añadir espacio entre las secciones */
+        color: #000201;
+    }
+
+    .footer-item h3,
+    .more-content h3,
+    .more-content-two h3,
+    .more-content-three h3 {
+        font-size: 16px; /* Ajustar el tamaño del título */
+        margin-bottom: 10px;
+    }
+
+    .change-color {
+        font-size: 18px; /* Ajustar tamaño de texto más grande */
+    }
+}
+
+
+/* Estilos generales para .last-one */
+.last-one {
+    display: flex;
+    flex-direction: row; /* Colocar los divs en una fila */
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between; /* Espaciado entre los elementos */
+    text-align: center;
+    background-color: #0f5a26;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.last-icon {
+    font-size: 30px;
+    color: white;
+}
+
+.search-bar-last {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-bar-last i {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+    color: #666;
+}
+
+.newsletter,
+.newsletter2 {
+    color: #ccc;
+    font-size: small;
+}
+
+.search-bar-last input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: #0f5a26;
+}
+
+.search-bar-last button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #7DBC91;
+    font-size: smaller;
+}
+
+.lasts-icon {
+    color: #e0e0e0;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estilos para el copyright */
+.copyright {
+    padding: 20px;
+    background-color: #093617;
+}
+
+.copyright-content {
+    text-align: center;
+    color: #cccccc;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .last-one {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        gap: 20px;
+        align-items: center; /* Centrar elementos en pantallas pequeñas */
+    }
+
+    .last-icon, .newsletter, .newsletter2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .search-bar-last {
+        max-width: 100%; /* Campo de búsqueda ocupa el 100% del ancho */
+    }
+
+    .search-bar-last input {
+        padding-left: 40px; /* Mantener espacio para el icono */
+    }
+
+    .lasts-icon {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .copyright {
+        padding: 10px;
+    }
+
+    .copyright-content {
+        font-size: 12px;
+    }
+}

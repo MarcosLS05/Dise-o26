@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <title>Online Store</title>
+</head>
+<body>
+    <section class="content-wrapper">
+
+    
+    <header>
+        <p class="title">Welcome to our online store! Join Free or <a href="signup.html">Sign in</a></p>
+        <div class="selectors">
+            <div class="dropdown">
+                <button class="dropbtn">English</button>               
+            </div>
+            <hr>
+            <div class="dropdown">
+                <button class="dropbtn">USD $</button>
+            </div>
+        </div>
+    </header>   
+    <hr class="divider-horizontal">
+    <section class="header-section">
+        <div class="ekommart">
+            <h1>ekommart</h1>
+        </div>
+    
+        <div class="search">
+            <i class="bi bi-search"></i> 
+            <input type="text" placeholder="Search">
+            <button>Search</button> 
+        </div>       
+    
+        <div class="icons">
+            <i class="bi bi-person" data-count="0"></i>
+            <i class="bi bi-heart" data-count="O"></i>
+            <i class="bi bi-basket2" data-count="O"></i>
+        </div>
+        <div class="money">
+            <h2>$00.0</h2>
+        </div>
+    </section>
+    <section class="display-section">
+        <div id="header">
+            <ul class="nav">
+                <li>
+                    <a href="#">Home</a>
+                    <ul class="submenu">
+                        <li><a href="#">submenu 1</a></li>
+                        <li><a href="#">submenu 2</a></li>
+                        <li><a href="#">submenu 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shop</a>
+                    <ul class="submenu">
+                        <li><a href="#">submenu 1</a></li>
+                        <li><a href="#">submenu 2</a></li>
+                        <li><a href="#">submenu 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Page</a>
+                    <ul class="submenu">
+                        <li><a href="#">submenu 1</a></li>
+                        <li><a href="#">submenu 2</a></li>
+                        <li><a href="#">submenu 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Shortcode</a></li>
+                <li><a href="#">On Sale</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="image">
+        <div class="image-container">
+            <img src="img/fondoGrande.png" alt="Bimage">
+        </div>
+    </section>
+    <section class="deals-section">
+        <div class="timer">
+            <h1>Top weekly deals</h1>
+            <p>Up to 70% off top brands</p>
+        </div>
+        <div class="contador">
+            <div class="time">
+                <span class="number">3</span>
+                <span class="label">days</span>
+            </div>
+            <p class="separator">.</p>
+            <div class="time">
+                <span class="number">21</span>
+                <span class="label">hours</span>
+            </div>
+            <p class="separator">.</p>
+            <div class="time">
+                <span class="number">46</span>
+                <span class="label">mins</span>
+            </div>
+            <p class="separator">.</p>
+            <div class="time">
+                <span class="number">35</span>
+                <span class="label">secs</span>
+            </div>
+        </div>
+    </section>
+    <section class="product-grid">
+        <article class="product-item">
+            <div class="badges">
+                <span class="badge new">New</span>
+                <span class="badge sale">Sale</span>
+            </div>
+            <img src="img/producto3.png" alt="Fleece Badge Of Sport Graphic Hoodie" class="product-image">
+            <h2 class="product-title">Fleece Badge Of Sport Graphic Hoodie</h2>
+            <div class="rating">
+                ★★★★☆
+            </div>
+            <p class="product-price">$49.99</p>
+        </article>
+    
+        <article class="product-item">
+            <div class="badges">
+            </div>
+            <img src="img/producto2.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
+            <h2 class="product-title">Indoor Herb Garden Starter Kit - Organic</h2>
+            <div class="rating">
+                ★★★★☆
+            </div>
+            <p class="product-price">$55.99</p>
+        </article>
+        <article class="product-item">
+            <div class="badges">
+                <div class="badges">
+                    <span class="badge new">New</span>
+                </div>
+            </div>
+            <img src="img/producto.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
+            <h2 class="product-title">Keter Easy Grow 31.7 Gallon Raised Garden Bed</h2>
+            <div class="rating">
+                ★★★★☆
+            </div>
+            <p class="product-price">$69.99</p>
+        </article>
+        <article class="product-item">
+            <div class="badges">
+                <div class="badges">
+                    <span class="badge sale">Sale</span>
+                </div>
+            </div>
+            <img src="img/producto4.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
+            <h2 class="product-title">Sloggers Women's Waterproff Rain and Garden</h2>
+            <div class="rating">
+                ★★★★☆
+            </div>
+            <p class="product-price">$49.99</p>
+        </article>
+        <article class="product-item">
+            <div class="badges">
+                
+            </div>
+            <img src="img/producto5.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
+            <h2 class="product-title">My Fairy Garden Nature Cottage - Grow Play Set</h2>
+            <div class="rating">
+                ★★★★☆
+            </div>
+            <p class="product-price">$39.99</p>
+        </article>
+       
+    </section>
+    <hr class="divider-green">
+<!-- Primera sección: Shop con categorías y productos -->
+<section class="shop-container">
+    <!-- Sidebar de categorías -->
+    <aside class="categories">
+        <h2>Seeds & Plants</h2>
+        <ul>
+            <li><a href="#">Organic Seeds</a></li>
+            <li><a href="#">Vegetable Starts</a></li>
+            <li><a href="#">Seed Starting Pots & Kits</a></li>
+            <li><a href="#">Row & Plant Markers</a></li>
+            <li><a href="#">Garden Edgings</a></li>
+            <li><a href="#">Mulches</a></li>
+        </ul>
+    </aside>
+
+    <!-- Sección de productos -->
+    <main class="product-main">
+        <div class="product-feature">
+            <img src="img/fondoblanco.avif" alt="Product Image" class="product-images">
+            <div class="product-info">
+                <div class="product-actions">
+                    <div class="especial">
+                        <i class="bi bi-cart4"></i>
+                    </div>
+                    <i class="bi bi-heart"></i>
+                    <i class="bi bi-repeat"></i>
+                    <i class="bi bi-eye"></i>
+                </div>
+                <div class="product-details">
+                    <div class="ratings">★★★★☆</div>
+                    <h3 class="product-titles">Fleece Badge Of Sport Graphic Hoodie</h3>
+                    <p class="product-price">$49.99</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de productos relacionados -->
+        <div class="related-product">
+            <div class="related-product-item">
+                <img src="img/azada.png" alt="Product 2" class="product-thumbnail">
+                <div class="related-product-info">
+                    <div class="estrellas">★★★★☆</div>
+                    <h4 class="related-product-title">HomeImpro Outdoor Solar Lights Garden Crackle</h4>
+                    <p class="related-product-price">$69.99</p>
+                </div>
+            </div>
+            <div class="related-product-item">
+                <img src="img/bol.png" alt="Product 3" class="product-thumbnail">
+                <div class="related-product-info">
+                    <div class="estrellas">★★★★☆</div>
+                    <h4 class="related-product-title">Auger Drill Bit Garden Plant Flower Bulb Auger</h4>
+                    <p class="related-product-price">$39.99</p>
+                </div>
+            </div>
+            <div class="related-product-item">
+                <img src="img/cogollos.png" alt="Product 4" class="product-thumbnail">
+                <div class="related-product-info">
+                    <div class="estrellas">★★★★☆</div>
+                    <h4 class="related-product-title">Garden of Life Dr. Formulated Probiotics for Women</h4>
+                    <p class="related-product-price">$90.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner de promoción -->
+        <aside class="promo-banner">
+            <img src="img/fondoTrampita.png" alt="Promo Banner" class="product-images">
+        </aside>
+    </main>
+</section>
+
+
+<section class="manguera-container">
+    <div class="manguera">
+        <img src="img/manguera.png" alt="Manguera 1">
+    </div>
+    <div class="manguera2">
+        <img src="img/manguera2.png" alt="Manguera 2">
+    </div>
+</section>
+<section class="garden-tools">
+    <div class="garden">
+        <h1>Garden Tools </h1> 
+    </div>
+    <div class="tools">
+        <h1> · Watering & Irrigation · Season Extenders</h1>
+        
+    </div>
+</section>
+<section class="product-grid">
+    <article class="product-item">
+        <div class="badges">
+            <span class="badge new">New</span>
+            <span class="badge sale">Sale</span>
+        </div>
+        <img src="img/producto3.png" alt="Fleece Badge Of Sport Graphic Hoodie" class="product-image">
+        <h2 class="product-title">Fleece Badge Of Sport Graphic Hoodie</h2>
+        <div class="rating">
+            ★★★★☆
+        </div>
+        <p class="product-price">$49.99</p>
+    </article>
+
+    <article class="product-item">
+        <div class="badges">
+        </div>
+        <img src="img/producto2.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
+        <h2 class="product-title">Indoor Herb Garden Starter Kit - Organic</h2>
+        <div class="rating">
+            ★★★★☆
+        </div>
+        <p class="product-price">$55.99</p>
+    </article>
+    <article class="product-item">
+        <div class="badges">
+            <div class="badges">
+                <span class="badge new">New</span>
+            </div>
+        </div>
+        <img src="img/producto.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
+        <h2 class="product-title">Keter Easy Grow 31.7 Gallon Raised Garden Bed</h2>
+        <div class="rating">
+            ★★★★☆
+        </div>
+        <p class="product-price">$69.99</p>
+    </article>
+    <article class="product-item">
+        <div class="badges">
+            <div class="badges">
+                <span class="badge sale">Sale</span>
+            </div>
+        </div>
+        <img src="img/producto4.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
+        <h2 class="product-title">Sloggers Women's Waterproff Rain and Garden</h2>
+        <div class="rating">
+            ★★★★☆
+        </div>
+        <p class="product-price">$49.99</p>
+    </article>
+    <article class="product-item">
+        <div class="badges">
+            
+        </div>
+        <img src="img/producto5.png" alt="Indoor Herb Garden Starter Kit - Organic" class="product-image">
+        <h2 class="product-title">My Fairy Garden Nature Cottage - Grow Play Set</h2>
+        <div class="rating">
+            ★★★★☆
+        </div>
+        <p class="product-price">$39.99</p>
+    </article> 
+</section>
+
+<section class="container-shop">
+    <!-- Sidebar de categorías -->
+    <aside class="categories">
+        <h2>Soil & Fertilizers</h2>
+        <ul>
+            <li><a href="#">Organic Seeds</a></li>
+            <li><a href="#">Vegetable Starts</a></li>
+            <li><a href="#">Seed Starting Pots & Kits</a></li>
+            <li><a href="#">Row & Plant Markers</a></li>
+            <li><a href="#">Garden Edgings</a></li>
+            <li><a href="#">Mulches</a></li>
+        </ul>
+    </aside>
+
+    <!-- Sección de productos -->
+    <div class="container-a123">
+        <!-- Primer bloque de productos -->
+        <div class="block-a123">
+            <div class="item-a123">
+                <img src="img/hacha.png" alt="Product 2" class="image-a123">
+                <div class="info-a123">
+                    <div class="rating-a123">★★★★☆</div>
+                    <h4 class="title-a123">HomeImpro Outdoor Solar Lights Garden Crackle</h4>
+                    <p class="price-a123">$69.99</p>
+                </div>
+            </div>
+            <div class="item-a123">
+                <img src="img/rastrillo.png" alt="Product 3" class="image-a123">
+                <div class="info-a123">
+                    <div class="rating-a123">★★★★☆</div>
+                    <h4 class="title-a123">Auger Drill Bit Garden Plant Flower Bulb Auger</h4>
+                    <p class="price-a123">$39.99</p>
+                </div>
+            </div>
+            <div class="item-a123">
+                <img src="img/carrito.png" alt="Product 4" class="image-a123">
+                <div class="info-a123">
+                    <div class="rating-a123">★★★★☆</div>
+                    <h4 class="title-a123">Garden of Life Dr. Formulated Probiotics for Women</h4>
+                    <p class="price-a123">$90.00</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Segundo bloque de productos -->
+        <div class="block-b456">
+            <div class="item-b456">
+                <img src="img/nose.png" alt="Product 2" class="image-b456">
+                <div class="info-b456">
+                    <div class="rating-b456">★★★★☆</div>
+                    <h4 class="title-b456">HomeImpro Outdoor Solar Lights Garden Crackle</h4>
+                    <p class="price-b456">$69.99</p>
+                </div>
+            </div>
+            <div class="item-b456">
+                <img src="img/bol.png" alt="Product 3" class="image-b456">
+                <div class="info-b456">
+                    <div class="rating-b456">★★★★☆</div>
+                    <h4 class="title-b456">Auger Drill Bit Garden Plant Flower Bulb Auger</h4>
+                    <p class="price-b456">$39.99</p>
+                </div>
+            </div>
+            <div class="item-b456">
+                <img src="img/cogollos.png" alt="Product 4" class="image-b456">
+                <div class="info-b456">
+                    <div class="rating-b456">★★★★☆</div>
+                    <h4 class="title-b456">Garden of Life Dr. Formulated Probiotics for Women</h4>
+                    <p class="price-b456">$90.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="holamundo">
+        <img src="img/holamundo.png" alt="Manguera 1">
+    </div>
+</section>
+<section class="fondoGrande">
+    <div class="fondoAñadido">
+        <img src="img/fondoGrande2.png" alt="Manguera 1" class="fondoImagen">
+    </div>
+</section>
+<section class="corto">
+    <div class="blog">
+        <h1>From Our Blog</h1>
+        <p>Don't miss our latest update</p>
+    </div>
+</section>
+<section class="three-image-section">
+    <div class="image-card">
+        <img src="img/info2.png" alt="Image 1" class="image">
+        <div class="caption">Performance · 28 Jun, 2019 · by Administrator</div>
+        <h3 class="title">Introducing the Nike Victory Swim Collection</h3>
+        <p class="description">This is a description for Image 1. It gives more details about the image content.</p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+    <div class="image-card">
+        <img src="img/info1.png" alt="Image 2" class="image">
+        <div class="caption">Performance · 28 Jun, 2019 · by Administrator</div>
+        <h3 class="title">The KOBE Gets the Protro Treatment</h3>
+        <p class="description">This is a description for Image 2. It gives more details about the image content.</p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+    <div class="image-card">
+        <img src="img/info3.png" alt="Image 3" class="image">
+        <div class="caption">Performance · 28 Jun, 2019 · by Administrator</div>
+        <h3 class="title">Speed and Style: the Double-Life of Russell</h3>
+        <p class="description">This is a description for Image 3. It gives more details about the image content.</p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+</section>
+<hr class="divider-green">
+<section class="four-image-section">
+    <div class="image-item">
+        <img src="img/cizalla.png" alt="Image 1" class="image">
+        <h4 class="image-title">Gardening Success Guaranteed</h4>
+    </div>
+    <div class="image-item">
+        <img src="img/escalera.png" alt="Image 2" class="image">
+        <h4 class="image-title">Expert Garden Advice</h4>
+    </div>
+    <div class="image-item">
+        <img src="img/cubo.png" alt="Image 3" class="image">
+        <h4 class="image-title">Garden Lab Designed & Tested</h4>
+    </div>
+    <div class="image-item">
+        <img src="img/guantes.png" alt="Image 4" class="image">
+        <h4 class="image-title">Support a Community that Cares</h4>
+    </div>
+</section>
+<section class="user-info">
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-item">
+                <h3>CALL TO ORDER</h3>
+                    <P class="change-color">1-900-234-000</P>
+                    <p>All-in-one WooCommerce WordPress Theme is a specific, clean, minimal and ultimate theme</p>
+                    <p><strong>Address: </strong> 947 Clare Point, Western Sahara</p>
+                    <p><strong>Support: </strong> (01) 00 230 6789</p>                   
+                    <p class="email"><strong>Email:</strong><a href="#"> info2example.com</a></p>
+                
+    </div>
+    <div class="more-content">
+        <div class="more-item">
+            <h3>ACCOUNTS</h3>                         
+                    <p>Order Status</p>
+                    <p>Shipping</p>
+                    <p>Catalog Preferences</p>
+                    <p>Returns</p>
+                    <p>Contact Us</p>                                 
+        </div>
+    </div>
+    <div class="more-content-two">
+        <div class="more-item">
+            <h3>WHO WE ARE</h3>
+                    <p>About Us</p>
+                    <p>Our guarantee</p>
+                    <p>Good Works</p>
+                    <p>Carrers</p>
+                    <p>Tax Notice</p>                   
+        </div>
+    </div>
+    <div class="more-content-three">
+        <div class="more-item">
+            <h3>CUSTOMER SERVICE</h3>
+                    <p>My Accounts</p>
+                    <p>Affiliate</p>
+                    <p>Privacy Police</p>
+                    <p>FAQs</p>
+                    <p>Site Map</p>                   
+        </div>
+    </div>
+</section>
+<section class="last-one">
+
+    <div class="last-icon">
+        <i class="bi bi-telegram"></i>
+    </div>
+    <div class="newsletter">
+        <h5>SIGN UP TO NEWSLETTER</h5>
+    </div>
+    <div class="search-bar-last">
+         
+        <input type="text" placeholder="Your email...">
+        <button>Subscribe</button> 
+    </div>
+    <div class="newsletter2">
+        <h5>KEEP IN TOUCH</h5> 
+    </div>
+    <div class="lasts-icon">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-youtube"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-linkedin"></i>
+    </div>
+</section>
+<section class="copyright">
+    <div class="copyright-content">
+        <p>Copyright c 2020 <strong>ekommart</strong>. All Rights Reserved.</p>
+    </div>
+</section>
+</section>
+
+</body>
+</html>
