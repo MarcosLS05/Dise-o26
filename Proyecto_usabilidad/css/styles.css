@@ -46,12 +46,12 @@ header {
 }
 
 .title a {
-    color: #145a32; /* Verde oscuro con alto contraste */ 
-    text-decoration: none; 
+    color: #21552b; /* Verde oscuro con alto contraste */ 
+    text-decoration: underline; 
 }
 
 .title a:focus {
-    outline: 3px solid #f39c12; /* Borde naranja al enfocar */
+    outline: 3px solid #5270f5; /* Borde naranja al enfocar */
     text-decoration: underline;  /* Subrayado */
 }
 
@@ -1339,6 +1339,10 @@ button:focus {
     font-size: 16px;
     outline: none;
     background-color: #0f5a26;
+    /* stylelint-disable-next-line color-hex-length */
+    color: #ffffff; /* Texto blanco para máximo contraste */
+    /* stylelint-disable-next-line color-hex-length */
+    caret-color: #ffffff; /* Cursor blanco para mejor visibilidad */
 }
 
 .search-bar-last button {
