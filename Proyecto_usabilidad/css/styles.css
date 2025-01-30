@@ -348,6 +348,7 @@ button:focus {
 .submenu ul{
     background-color: #B9DFC8;
 }
+/* stylelint-disable-next-line rule-empty-line-before */
 .submenu li {
     padding: 10px;
     white-space: nowrap;
@@ -445,7 +446,7 @@ button:focus {
     gap: 20px;
     justify-content: center;
     padding: 20px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en líneas adicionales */
+    flex-wrap: wrap; 
     margin-top: 40px; /* Espacio adicional para que el título no esté pegado a la parte superior */
 }
 
@@ -497,7 +498,7 @@ button:focus {
     border-radius: 8px;
     text-align: center;
     padding: 20px;
-    width: 250px; /* Ajuste inicial para pantallas grandes */
+    width: 200px; /* Ajuste inicial para pantallas grandes */
 }
 
 .product-image {
