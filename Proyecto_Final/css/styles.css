@@ -306,7 +306,6 @@ header {
 }
 
 .display-section {
-    display: flex;
     justify-content: center;
     background-color: #7DBC91;
     padding: 10px;
@@ -501,15 +500,16 @@ header {
     gap: 20px;
     justify-content: center;
     padding: 20px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en líneas adicionales */
+    flex-wrap: wrap;
 
     .product-item {
         border: 1px solid #e0e0e0;
         border-radius: 8px;
         text-align: center;
         padding: 20px;
-        width: 250px; /* Ajuste inicial para pantallas grandes */
-        position: relative; /* Necesario para posicionar los badges */
+        width: 250px;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrega transición */
 
         .product-image {
             width: 100%;
@@ -519,14 +519,14 @@ header {
         }
 
         .badges {
-            position: absolute; /* Posiciona los badges encima de la imagen */
-            top: 10px; /* Margen superior */
-            left: 10px; /* Margen izquierdo */
+            position: absolute;
+            top: 10px;
+            left: 10px;
             display: flex;
             gap: 5px;
 
             .badge {
-                padding: 6px 10px; /* Ajustado para que el badge no sea tan grande */
+                padding: 6px 10px;
                 font-size: 12px;
                 border-radius: 4px;
                 color: #fff;
@@ -559,36 +559,42 @@ header {
             font-weight: bold;
             display: inline-block;
         }
+
+        /* Efecto al pasar el ratón */
+        &:hover {
+            transform: translateY(-8px); /* Hace que el elemento se levante */
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Agrega sombra para más realismo */
+        }
     }
 
-    /* Media Query para pantallas más pequeñas (menos de 600px) */
     @media screen and (max-width: 600px) {
         .product-item {
-            width: 100%; /* Ocupa el 100% del ancho disponible */
-            max-width: 300px; /* Máximo ancho para evitar que se estire demasiado */
+            width: 100%;
+            max-width: 300px;
         }
 
-        justify-content: center; /* Centra los productos */
-        gap: 10px; /* Reduce el espacio entre los productos */
+        justify-content: center;
+        gap: 10px;
 
         .product-title {
-            font-size: 14px; /* Reduce el tamaño del título */
+            font-size: 14px;
         }
 
         .product-price {
-            font-size: 16px; /* Reduce el tamaño del precio */
+            font-size: 16px;
         }
 
         .rating {
-            font-size: 12px; /* Reduce el tamaño de la calificación */
+            font-size: 12px;
         }
 
         .product-image {
             width: 100%;
-            height: auto; /* Asegura que la imagen se ajuste al contenedor */
+            height: auto;
         }
     }
 }
+
 
 .divider-green {
     border-bottom: 3px solid #7DBC91;
@@ -987,123 +993,31 @@ header {
         width: 100%;
 
         .container-categories {
-            width: 100%; /* Asegura que el sidebar ocupe todo el ancho */
-            border-right: none; /* Elimina el borde lateral */
-            text-align: center; /* Centra el contenido */
+            width: 100%;
+            border-right: none;
+            text-align: center;
             padding: 10px;
-
-            h2 {
-                font-size: 18px; /* Reduce el tamaño del título */
-            }
-
-            ul {
-                display: flex;
-                flex-direction: column; /* Asegura que los elementos se mantengan en columnas */
-                align-items: center; /* Centra los enlaces */
-                gap: 10px;
-            }
-        }
-
-        .holamundo {
-            width: 100%; /* Asegura que ocupe todo el ancho */
-            text-align: center; /* Centra el contenido */
-
-            img {
-                width: 30%; /* Reduce el tamaño del banner */
-                height: auto;
-            }
         }
     }
 
     /* Media queries para pantallas pequeñas */
     @media (max-width: 870px) {
-        flex-direction: column; /* Cambia la dirección del flexbox a vertical */
-        align-items: center; /* Centra los elementos */
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
-        padding: 10px; /* Reduce los márgenes en pantallas pequeñas */
-
-        .container-categories {
-            width: 100%; /* Asegura que el sidebar ocupe todo el ancho */
-            border-right: none; /* Elimina el borde lateral */
-            text-align: center; /* Centra el contenido */
-            padding: 10px;
-
-            h2 {
-                font-size: 18px; /* Reduce el tamaño del título */
-            }
-
-            ul {
-                display: flex;
-                flex-direction: column; /* Asegura que los elementos se mantengan en columnas */
-                align-items: center; /* Centra los enlaces */
-                gap: 10px;
-            }
-        }
-
-        .container-a123 {
-            width: 100%; /* Ocupa todo el ancho disponible */
-            display: flex;
-            flex-direction: column; /* Los bloques se apilan verticalmente */
-            gap: 20px;
-            align-items: center;
-
-            .block-a123,
-            .block-b456 {
-                display: flex;
-                flex-direction: column; /* Asegura que los productos se apilen verticalmente */
-                align-items: center; /* Centra los productos */
-                gap: 15px;
-
-                .item-a123,
-                .item-b456 {
-                    width: 90%; /* Ajusta el tamaño de los productos para que se vean proporcionados */
-                    text-align: center; /* Centra el texto y las imágenes */
-
-                    .image-a123,
-                    .image-b456 {
-                        width: 100%; /* Asegura que las imágenes se ajusten al contenedor */
-                        height: auto;
-                        border-radius: 8px;
-                    }
-                }
-            }
-        }
-
-        .holamundo {
-            width: 100%; /* Asegura que ocupe todo el ancho */
-            text-align: center; /* Centra el contenido */
-
-            img {
-                width: 30%; /* Reduce el tamaño del banner */
-                height: auto;
-            }
-        }
+        padding: 10px;
     }
 
     @media screen and (max-width: 768px) {
         .title-a123,
         .title-b456 {
-            font-size: 14px; /* Reduce el tamaño de la fuente */
-            white-space: normal; /* Permite que el texto se divida en varias líneas */
-            overflow: hidden; /* Evita que el texto se desborde */
-            text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+            font-size: 14px;
+            white-space: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
+            -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
-        }
-    
-        .item-a123,
-        .item-b456 {
-            flex-direction: column; /* Apila la imagen y el texto verticalmente */
-            text-align: center; /* Centra el texto */
-        }
-    
-        .image-a123,
-        .image-b456 {
-            width: 100%; /* Ajusta el ancho de la imagen al contenedor */
-            max-width: 120px; /* Limita el tamaño máximo de la imagen */
-            height: auto; /* Mantiene la proporción de la imagen */
-            margin-bottom: 10px; /* Espacio entre la imagen y el texto */
         }
     }
 
@@ -1134,6 +1048,14 @@ header {
         background-color: #f9f9f9;
         border-radius: 8px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    /* Efecto de elevación al pasar el ratón */
+    .item-a123:hover,
+    .item-b456:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     }
 
     /* Imágenes */
