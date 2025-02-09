@@ -56,6 +56,14 @@ header {
       .dropdown {
         position: relative;
         display: inline-block;
+
+        img {
+            width: 20px; /* Ajusta el tamaño según necesites */
+            height: auto;
+            vertical-align: middle;
+            margin-right: 3px; /* Espacio entre la imagen y el botón */
+        }
+        
   
         .dropbtn {
           background-color: #f5f5f5;
@@ -469,6 +477,16 @@ header {
             justify-content: center;
         }
     }
+
+    @media screen and (max-width: 600px) {
+        .contador {
+            .time {
+                .number {
+                    font-size: 24px; 
+                }
+            }
+        }
+    }
 }
 
 
@@ -491,6 +509,7 @@ header {
         text-align: center;
         padding: 20px;
         width: 250px; /* Ajuste inicial para pantallas grandes */
+        position: relative; /* Necesario para posicionar los badges */
 
         .product-image {
             width: 100%;
@@ -500,10 +519,11 @@ header {
         }
 
         .badges {
+            position: absolute; /* Posiciona los badges encima de la imagen */
+            top: 10px; /* Margen superior */
+            left: 10px; /* Margen izquierdo */
             display: flex;
-            justify-content: flex-start;
             gap: 5px;
-            margin-bottom: 10px;
 
             .badge {
                 padding: 6px 10px; /* Ajustado para que el badge no sea tan grande */
@@ -859,15 +879,40 @@ header {
   }
 
   
-.garden-tools {
+  .garden-tools {
     display: flex;
     align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
     width: 100%;
     padding: 30px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    text-align: center; /* Centra el texto */
 
     /* Estilo para el texto con clase .garden */
     .garden {
         color: #7DBC91;
+        margin-right: 10px; /* Espacio entre los textos */
+    }
+
+    /* Estilo para el texto con clase .tools */
+    .tools h1 {
+        color: #333; /* Color del texto */
+        font-size: 1.5rem; /* Tamaño de fuente */
+    }
+
+    /* Media Query para pantallas pequeñas (menos de 768px) */
+    @media screen and (max-width: 768px) {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        gap: 10px; /* Espacio entre los elementos */
+
+        .garden h1,
+        .tools h1 {
+            font-size: 1.2rem; /* Reduce el tamaño de la fuente en móviles */
+        }
+
+        .garden {
+            margin-right: 0; /* Elimina el margen derecho en móviles */
+        }
     }
 }
 
@@ -1164,6 +1209,7 @@ header {
 
     /* Estilos para el párrafo dentro de .blog */
     .blog {
+        padding: 20px;
         p {
             color: #a7a7a7;
             justify-content: center;
