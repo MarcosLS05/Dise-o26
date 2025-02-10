@@ -1038,6 +1038,61 @@ header {
         width: 48%;
     }
 
+    /* Media queries para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .container-a123 {
+            flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+            gap: 10px; /* Reduce el espacio entre bloques */
+        }
+
+        .block-a123,
+        .block-b456 {
+            width: 100%; /* Cada bloque ocupa el 100% del ancho en pantallas pequeñas */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        /* Cambia la disposición de los elementos internos en pantallas pequeñas */
+        .item-a123,
+        .item-b456 {
+            flex-direction: column; /* Apila los elementos en columna */
+            align-items: center; /* Centra los elementos horizontalmente */
+            text-align: center; /* Centra el texto */
+            gap: 10px; /* Espacio entre elementos */
+        }
+
+        /* Ajustes para las imágenes */
+        .image-a123,
+        .image-b456 {
+            width: 100px; /* Tamaño fijo para la imagen */
+            height: 100px;
+            border-radius: 8px; /* Bordes redondeados */
+        }
+
+        /* Ajustes para el rating */
+        .rating-a123,
+        .rating-b456 {
+            font-size: 16px; /* Tamaño del rating */
+        }
+
+        /* Ajustes para el título */
+        .title-a123,
+        .title-b456 {
+            font-size: 16px; /* Tamaño del título */
+            margin: 5px 0; /* Espaciado */
+        }
+
+        /* Ajustes para el precio */
+        .price-a123,
+        .price-b456 {
+            font-size: 18px; /* Tamaño del precio */
+            color: #7DBC91; /* Color del precio */
+            font-weight: bold; /* Negrita */
+        }
+    }
+
     /* Productos individuales */
     .item-a123,
     .item-b456 {
