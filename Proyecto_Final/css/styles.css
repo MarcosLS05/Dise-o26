@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
 
 
-@media screen and (max-width: 600px) {
+@media screen and (width <= 600px) {
     body {
         background-attachment: fixed;
         font-size: 14px;
@@ -21,7 +21,7 @@ body {
 .content-wrapper {
     max-width: 90%;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255 255 255 / 90%);
     padding: 20px;
 }
 
@@ -98,7 +98,7 @@ header {
       }
     }
   
-    @media screen and (max-width: 600px) {
+    @media screen and (width <= 600px) {
       flex-direction: column;
       align-items: flex-start;
   
@@ -221,8 +221,7 @@ header {
         margin-left: 20px; /* Espaciado entre íconos y dinero */
     }
 
-    @media screen and (max-width: 1070px) {
-
+    @media screen and (width <= 1070px) {
             justify-content: center;
             align-items: center;
             
@@ -255,9 +254,7 @@ header {
         }
     }
 
-    @media screen and (max-width: 768px) {
-        
-
+    @media screen and (width <= 768px) {
         .ekommart {
             order: 1; /* Coloca el título primero */
         }
@@ -278,9 +275,9 @@ header {
         }
     }
 
-    @media screen and (max-width: 480px) {
-
+    @media screen and (width <= 480px) {
         flex-direction: row;
+
         .search {
             input, button {
                 font-size: 14px;
@@ -299,6 +296,7 @@ header {
             font-size: 20px;
         }
     }
+
         .money h2 {
             font-size: 16px;
         }
@@ -345,7 +343,7 @@ header {
                 background-color: #fff;
                 border-radius: 5px;
                 min-width: 160px;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
                 z-index: 1000;
 
                 li {
@@ -373,7 +371,7 @@ header {
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (width <= 768px) {
         flex-direction: column;
         align-items: center;
 
@@ -467,7 +465,7 @@ header {
     }
 
     /* Responsive dentro de SASS */
-    @media screen and (max-width: 800px) {
+    @media screen and (width <= 800px) {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -477,7 +475,7 @@ header {
         }
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (width <= 600px) {
         .contador {
             .time {
                 .number {
@@ -563,11 +561,11 @@ header {
         /* Efecto al pasar el ratón */
         &:hover {
             transform: translateY(-8px); /* Hace que el elemento se levante */
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Agrega sombra para más realismo */
+            box-shadow: 0 8px 15px rgb(0 0 0 / 20%); /* Agrega sombra para más realismo */
         }
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (width <= 600px) {
         .product-item {
             width: 100%;
             max-width: 300px;
@@ -656,7 +654,7 @@ header {
 
         .product-feature {
             position: relative;
-            background-image: url(../img/fondoblanco.avif);
+            background-image: url("../img/fondoblanco.avif");
             width: 30%;
             padding: 20px;
             display: flex;
@@ -753,7 +751,6 @@ header {
                 }
 
                 .product-thumbnail {
-                    
                      /* Asegura que la imagen no se desborde */
                     max-width: 100%; /* Limita el crecimiento de la imagen */
                 }
@@ -781,7 +778,7 @@ header {
         }
     }
 
-@media screen and (max-width: 1200px) {
+@media screen and (width <= 1200px) {
     .shop-container {
         flex-direction: column;
         align-items: center; /* Centra todo horizontalmente */
@@ -817,7 +814,7 @@ header {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
     .product-feature {
         padding: 10px;
     }
@@ -846,7 +843,7 @@ header {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (width <= 480px) {
     .product-titles {
         font-size: 16px; /* Reduce el tamaño del título */
     }
@@ -907,7 +904,7 @@ header {
     }
 
     /* Media Query para pantallas pequeñas (menos de 768px) */
-    @media screen and (max-width: 768px) {
+    @media screen and (width <= 768px) {
         flex-direction: column; /* Apila los elementos verticalmente */
         gap: 10px; /* Espacio entre los elementos */
 
@@ -987,7 +984,7 @@ header {
     }
 
     /* Media queries para pantallas medianas */
-    @media screen and (max-width: 1180px) {
+    @media screen and (width <= 1180px) {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -1001,14 +998,14 @@ header {
     }
 
     /* Media queries para pantallas pequeñas */
-    @media (max-width: 870px) {
+    @media (width <= 870px) {
         flex-direction: column;
         align-items: center;
         gap: 20px;
         padding: 10px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (width <= 768px) {
         .title-a123,
         .title-b456 {
             font-size: 14px;
@@ -1039,7 +1036,7 @@ header {
     }
 
     /* Media queries para pantallas pequeñas */
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
         .container-a123 {
             flex-direction: column; /* Cambia a columna en pantallas pequeñas */
             gap: 10px; /* Reduce el espacio entre bloques */
@@ -1050,7 +1047,7 @@ header {
             width: 100%; /* Cada bloque ocupa el 100% del ancho en pantallas pequeñas */
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
             padding: 15px;
         }
 
@@ -1102,7 +1099,7 @@ header {
         padding: 10px;
         background-color: #f9f9f9;
         border-radius: 8px;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
 
@@ -1110,7 +1107,7 @@ header {
     .item-a123:hover,
     .item-b456:hover {
         transform: translateY(-5px);
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
     }
 
     /* Imágenes */
@@ -1187,6 +1184,7 @@ header {
     /* Estilos para el párrafo dentro de .blog */
     .blog {
         padding: 20px;
+
         p {
             color: #a7a7a7;
             justify-content: center;
@@ -1213,6 +1211,7 @@ header {
       align-items: flex-start;
       text-align: left;
       gap: 10px; 
+
       img.image {
         width: 100%;
         height: auto; 
@@ -1251,8 +1250,9 @@ header {
     }
   
    
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       flex-direction: column; 
+
       .image-card {
         max-width: 100%;
         margin-bottom: 20px; 
@@ -1293,7 +1293,7 @@ header {
         width: 20%;
         height: auto;
         border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
       }
   
       .image-title {
@@ -1303,7 +1303,7 @@ header {
       }
     }
   
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       flex-direction: column;
   
       .image-item {
@@ -1357,7 +1357,7 @@ header {
       }
     }
   
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       .footer-content {
         flex-direction: column;
         align-items: flex-start;
@@ -1460,11 +1460,11 @@ header {
   
     .copyright-content {
       text-align: center;
-      color: #cccccc;
+      color: #ccc;
     }
   }
   
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     .last-one {
       flex-direction: column;
       gap: 20px;
